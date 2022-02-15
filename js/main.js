@@ -18,7 +18,7 @@ btn.innerText = 'Submit';
 sectionName.append(inputName);
 sectionAge.append(inputAge);
 
-form.append(sectionName, sectionAge, btn)
+form.append(sectionName, sectionAge, btn);
 containerForm.append(form);
 
 document.body.append(containerForm);
@@ -36,7 +36,7 @@ btn.addEventListener('click', function (e) {
     userObj.age = `${inAge}`;
 
     let user = JSON.parse(localStorage.getItem(userKey));
-    user.push(userObj)
+    user.push(userObj);
     localStorage.setItem(userKey, JSON.stringify(user));
 });
 
@@ -56,7 +56,7 @@ sectionType.innerText = 'Type:';
 let inputType = document.createElement('INPUT');
 
 let sectionValue = document.createElement('SECTION');
-sectionValue.innerText = 'Value:'
+sectionValue.innerText = 'Value:';
 let inputVolume = document.createElement('INPUT');
 
 let formCars = document.createElement('FORM');
@@ -85,6 +85,6 @@ btnCar.addEventListener('click', function (e) {
     carS.volume = inVolume;
 
     let car = JSON.parse(localStorage.getItem(carKey));
-    car.push(carS)
+    car.push(carS);
     localStorage.setItem(carKey, JSON.stringify(car));
 });
